@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!-- Example Startups (For Demo Purposes) -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Startup Matchmaking Platform</title>
+    <style>
+        /* ... existing styles ... */
+
+        /* Startup Card Styles */
+        .startup-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 5%;
+        }
+
+        .startup-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+        }
+
+        .startup-card h3 {
+            color: var(--primary-red);
+            margin-bottom: 0.5rem;
+        }
+
+        .startup-card .university {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .startup-card .description {
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .startup-card .stage {
+            display: inline-block;
+            background: var(--light-gray);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .startup-card .funding {
+            font-weight: bold;
+            color: var(--dark-gray);
+        }
+    </style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Startup Matchmaking Platform</title>
+    <style>
+        :root {
+            --primary-red: #FF5A5F;
+            --white: #FFFFFF;
+            --light-gray: #F7F7F7;
+            --dark-gray: #484848;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            color: var(--primary-red);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 1rem;
+        }
+
+        .dropdown-btn {
+            background: var(--white);
+            color: var(--dark-gray);
+            padding: 0.5rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--white);
+            min-width: 200px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: var(--dark-gray);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--light-gray);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 5%;
+            background: var(--light-gray);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--dark-gray);
+            margin-bottom: 2rem;
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--primary-red);
+            color: var(--white);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">StartupMatch</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#browse">Browse Startups</a>
+            <a href="#about">About</a>
+            <a href="login.html">Login/Register</a>
+            
+            <div class="dropdown">
+                <button class="dropdown-btn">Industry ▼</button>
+                <div class="dropdown-content">
+                    <a href="#" data-filter="biotech">Biotech</a>
+                    <a href="#" data-filter="education">Education</a>
+                    <a href="#" data-filter="greentech">Green Tech</a>
+                    <a href="#" data-filter="fintech">Fintech</a>
+                    <a href="#" data-filter="ai-ml">AI/ML</a>
+                    <a href="#" data-filter="saas">SaaS</a>
+                    <a href="#" data-filter="healthcare">Healthcare</a>
+                    <a href="#" data-filter="other">Other</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Stage ▼</button>
+                <div class="dropdown-content">
+                    <a href="#" data-filter="pre-seed">Pre-seed</a>
+                    <a href="#" data-filter="seed">Seed</a>
+                    <a href="#" data-filter="series-a">Series A</a>
+                    <a href="#" data-filter="series-b">Series B</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">School ▼</button>
+                <div class="dropdown-content">
+                    <a href="#" data-filter="harvard">Harvard University</a>
+                    <a href="#" data-filter="stanford">Stanford University</a>
+                    <a href="#" data-filter="mit">MIT</a>
+                    <a href="#" data-filter="berkeley">UC Berkeley</a>
+                    <a href="#" data-filter="princeton">Princeton University</a>
+                    <a href="#" data-filter="chicago">University of Chicago</a>
+                    <a href="#" data-filter="columbia">Columbia University</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Empowering University Startups</h1>
+        <p>Connecting student-led ventures with investors who believe in innovation.</p>
+        <div class="cta-buttons">
+            <button class="btn btn-primary">Register Startup</button>
+            <button class="btn">Discover Startups</button>
+        </div>
+    </section>
+
+    <script>
+        // Add click event listeners to filter options
+        document.querySelectorAll('.dropdown-content a').forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                const filter = e.target.dataset.filter;
+                const category = e.target.closest('.dropdown').querySelector('.dropdown-btn').textContent.trim().slice(0, -2);
+                console.log(`Selected ${category}: ${filter}`);
+                // Add your filtering logic here
+            });
+        });
+    </script>
+</body>
+    <script>
+        // Add click event listeners to filter options
+        document.querySelectorAll('.dropdown-content a').forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                const filter = e.target.dataset.filter;
+                const category = e.target.closest('.dropdown').querySelector('.dropdown-btn').textContent.trim().slice(0, -2);
+                console.log(`Selected ${category}: ${filter}`);
+                // Add your filtering logic here
+            });
+        });
+
+        // Add click event listeners to CTA buttons
+        document.querySelector('.btn-primary').addEventListener('click', () => {
+            window.location.href = 'register.html';
+        });
+    </script>
+</body>
+</html>
