@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browse Startups</title>
     <link rel="stylesheet" href="style/style.css">
+    <style>
+        .startup-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .startup-logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            border-radius: 50%;
+        }
+        
+        .startup-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            padding-right: 60px;
+        }
+        
+        .startup-description {
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+        }
+    </style>
     
 </head>
 <body>
@@ -50,7 +82,7 @@
 
                 .startup-grid {
                     display: grid;
-                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                    grid-template-columns: repeat(4, 1fr);
                     gap: 2rem;
                     padding: 2rem;
                 }
@@ -60,7 +92,6 @@
                     border-radius: 8px;
                     padding: 1.5rem;
                     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-                    aspect-ratio: 1;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
@@ -105,17 +136,24 @@
                     </div>
                 </div>
             </div>
+            <script>
+                document.querySelector('.startup-card').addEventListener('click', () => {
+                    window.location.href = 'Startupprofile.html';
+                });
+            </script>
 
             <div class="startup-grid">
                 <div class="startup-card">
+                    <img src="logo.png" alt="TechStart Logo" class="startup-logo">
                     <h3>TechStart</h3>
                     <div class="university">Stanford University</div>
-                    <div class="description">AI-powered learning platform for STEM education</div>
+                    <div class="description">An innovative AI-powered platform revolutionizing STEM education through personalized learning experiences and real-time analytics.</div>
                     <span class="stage">Seed Stage</span>
                     <div class="funding">Seeking: $500K</div>
                 </div>
 
                 <div class="startup-card">
+                    <img src="images/greenenergy-logo.png" alt="GreenEnergy Logo" class="startup-logo">
                     <h3>GreenEnergy</h3>
                     <div class="university">MIT</div>
                     <div class="description">Sustainable energy solutions for urban environments</div>
@@ -124,6 +162,7 @@
                 </div>
 
                 <div class="startup-card">
+                    <img src="images/healthtech-logo.png" alt="HealthTech Logo" class="startup-logo">
                     <h3>HealthTech</h3>
                     <div class="university">Harvard University</div>
                     <div class="description">Revolutionary healthcare monitoring system</div>
@@ -132,6 +171,7 @@
                 </div>
 
                 <div class="startup-card">
+                    <img src="images/datasmart-logo.png" alt="DataSmart Logo" class="startup-logo">
                     <h3>DataSmart</h3>
                     <div class="university">Berkeley</div>
                     <div class="description">Big data analytics for small businesses</div>
@@ -140,6 +180,7 @@
                 </div>
 
                 <div class="startup-card">
+                    <img src="images/robotech-logo.png" alt="RoboTech Logo" class="startup-logo">
                     <h3>RoboTech</h3>
                     <div class="university">Carnegie Mellon</div>
                     <div class="description">Autonomous robotics for warehouse management</div>
@@ -148,6 +189,7 @@
                 </div>
 
                 <div class="startup-card">
+                    <img src="images/educonnect-logo.png" alt="EduConnect Logo" class="startup-logo">
                     <h3>EduConnect</h3>
                     <div class="university">Yale University</div>
                     <div class="description">Virtual reality solutions for remote learning</div>
@@ -156,72 +198,25 @@
                 </div>
 
                 <div class="startup-card">
+                    <img src="images/bioinnovate-logo.png" alt="BioInnovate Logo" class="startup-logo">
                     <h3>BioInnovate</h3>
                     <div class="university">Johns Hopkins</div>
                     <div class="description">Biotechnology research and development</div>
                     <span class="stage">Pre-seed</span>
                     <div class="funding">Seeking: $250K</div>
                 </div>
+
+                <div class="startup-card">
+                    <img src="images/securechain-logo.png" alt="SecureChain Logo" class="startup-logo">
+                    <h3>SecureChain</h3>
+                    <div class="university">Princeton</div>
+                    <div class="description">Blockchain security solutions</div>
+                    <span class="stage">Seed Stage</span>
+                    <div class="funding">Seeking: $800K</div>
+                </div>
             </div>
-        </div>
-
-        <div class="startup-grid">
-            <div class="startup-card">
-                <h3>GreenEnergy</h3>
-                <div class="university">MIT</div>
-                <div class="description">Sustainable energy solutions for urban environments</div>
-                <span class="stage">Series A</span>
-                <div class="funding">Seeking: $2M</div>
-            </div>
-        </div>
-
-        <div class="startup-card">
-            <h3>HealthTech</h3>
-            <div class="university">Harvard University</div>
-            <div class="description">Revolutionary healthcare monitoring system</div>
-            <span class="stage">Pre-seed</span>
-            <div class="funding">Seeking: $300K</div>
-        </div>
-
-        <div class="startup-card">
-            <h3>DataSmart</h3>
-            <div class="university">Berkeley</div>
-            <div class="description">Big data analytics for small businesses</div>
-            <span class="stage">Seed Stage</span>
-            <div class="funding">Seeking: $750K</div>
-        </div>
-
-        <div class="startup-card">
-            <h3>RoboTech</h3>
-            <div class="university">Carnegie Mellon</div>
-            <div class="description">Autonomous robotics for warehouse management</div>
-            <span class="stage">Series A</span>
-            <div class="funding">Seeking: $3M</div>
-        </div>
-
-        <div class="startup-card">
-            <h3>EduConnect</h3>
-            <div class="university">Yale University</div>
-            <div class="description">Virtual reality solutions for remote learning</div>
-            <span class="stage">Seed Stage</span>
-            <div class="funding">Seeking: $1M</div>
-        </div>
-
-        <div class="startup-card">
-            <h3>BioInnovate</h3>
-            <div class="university">Johns Hopkins</div>
-            <div class="description">Biotechnology research and development</div>
-            <span class="stage">Pre-seed</span>
-            <div class="funding">Seeking: $250K</div>
-        </div>
-
-        <div class="startup-card">
-            <h3>SecureChain</h3>
-            <div class="university">Princeton</div>
-            <div class="description">Blockchain security solutions</div>
-            <span class="stage">Seed Stage</span>
-            <div class="funding">Seeking: $800K</div>
         </div>
     </div>
 </body>
 </html>
+                
